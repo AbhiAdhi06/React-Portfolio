@@ -6,8 +6,6 @@ import swal from "sweetalert";
 const Contact = () => {
   // With Firebase RealTime Database
 
-  // Database Link: https://abhitech190-default-rtdb.firebaseio.com/
-
   const [userData, setUserData] = useState({
     userName: "",
     userPhone: "",
