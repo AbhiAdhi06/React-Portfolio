@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: #808080;
+    color: #ffffff;
+    outline: none;
+}
+
+.menu{
+    background-color: white;
+    height: 72px;
+    box-shadow: 10px 0 10px black;
+}
+
+.menu li{
+    float: right;
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menu li:nth-child(1){
+    margin-right: 20px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+}
+
+
+.logo p{
+    position: relative;
+    top: 20px;
+    left: 40px;
+    font-size: 20px;
+    color: black;
+    width: 0;
+    height: 0;
+}
+
+.logo p a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo p span{
+    font-size: 30px;
+    color: crimson;
+}
+
+.container{
+    background-image: url('bgimg.jpg');
+    background-size: cover;
+    height: 89vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.name{
+    position: relative;
+    top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+.animation-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 210px;
+}
+
+.animation-text p{
+    font-size: 60px;
+    color: black;
+    font-family: 'cascadia code', Consolas, 'Courier New', monospace;
+}
+
+.options{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.options li{
+    list-style: none;
+    color: #face30;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -360px;
+    }
+}
+
+.options li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.options li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-color: #efefef;
+    border-left: 2px solid #face30;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40% , 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
+
+/* Buttons */
+
+.btns{
+    display: flex;
+    justify-content: center;
+}
+#btn1{
+    position: relative;
+    top: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    border-bottom: 5px solid #111;
+    border-top: 5px solid #111;
+    transition: all .7s ease-in-out;
+}
+
+.burger-resp{
+    display: none;
+    position: relative;
+    top: 10px;
+    right: 20px;
+    height: 35px;
+    width: 35px;
+    float: right;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    outline: none;
+}
+
+.bi-list{
+    position: absolute;
+    font-size: 50px;
+    outline: none;
+}
+
+.bi-house , .bi-person , .bi-book , .bi-phone{
+    display: none;
+}
+/* Contact */
+
+@media only screen and (max-width: 600px){
+    .resp-desktop{
+        display: none;
+    }
+    .resp{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .resp li{
+        height: 96px;
+        background-color: white;
+        position: relative;
+        width: 18rem;
+        left: -20px;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .burger-resp{
+        display: block;
+    }
+    .bi-house , .bi-person , .bi-book , .bi-phone{
+        display: block;
+        background-color: #face30;
+        position: relative;
+        height: 0;
+        width: 0;
+        left: 75px;
+    }
+
+    .animation-text p{
+        text-align: center;
+        position: absolute;
+        top:50%;
+        font-weight: bold;
+        text-shadow: 5px 8px 6px black;
+    }
+    .options li span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        background-color: #efefef;
+        border-left: 2px solid #face30;
+        animation: typing 3s steps(10) infinite;
+    }
+    .options li{
+        list-style: none;
+        color: #face30;
+        font-size: 40px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        animation: slide 12s steps(4) infinite;
+    }
+
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95vh;
+        flex-direction: column;
+    }
+    
+    .form input{
+        margin-top: 20px;
+        padding: 20px;
+        font-size: large;
+        color: black;
+        overflow: hidden;
+        border-radius: 10px;
+        border-color: black;
+    }
+
+    #area{
+        margin-top: 20px;
+        padding: 20px;
+        color: black;
+        border-radius: 10px;
+        border: 2px solid black;
+        resize: none;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    }
+
+    .form #submit{
+        padding: 5px;
+        border-radius: 10px;
+        color: black;
+    }
+    .footer{
+        padding-top: 30px;
+        background-color: rgb(209, 202, 202);
+        color: #efefef;
+        height: 90px;
+    }
+}
