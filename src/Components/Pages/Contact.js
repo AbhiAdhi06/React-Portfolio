@@ -50,8 +50,8 @@ const Contact = () => {
         userReview: "",
       });
       swal({
-        type: "success",
-        message: "Your Review Has Been Recorded",
+        title: "Thank You",
+        text: "For Your Response",
         icon: "success"
       });
     } else {
