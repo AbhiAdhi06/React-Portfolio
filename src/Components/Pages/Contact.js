@@ -28,7 +28,7 @@ const Contact = () => {
   const submitData = async (event) => {
     event.preventDefault();
     const res = await fetch(
-      "https://abhitech190-default-rtdb.firebaseio.com/userDataRecords.json",
+      "Your Firebase End Point",
       {
         method: "POST",
         Headers: {
